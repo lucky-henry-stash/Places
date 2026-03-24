@@ -11,7 +11,7 @@ You need to build and run the modified wikipedia app to test this properly. Plea
 
 You can follow the build instructions provided by original author here: https://github.com/lucky-henry-stash/wikipedia-ios?tab=readme-ov-file#building-and-running.
 
-But to simplify: 
+But to simplify to run wikipedia app you can: 
 - run `script/setup`
 - then open the xcodeproject in xcode and run
 
