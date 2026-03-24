@@ -34,10 +34,12 @@ https://github.com/user-attachments/assets/efd5f741-553e-43ba-a99e-758975798a0a
 
 ## Screenshots
 Portrait
-<img width="1260" height="2736" alt="image" src="https://github.com/user-attachments/assets/9fa6742a-4b73-4b12-b65a-386d160edd7e" />
+<img width="1260" height="2736" alt="image" src="https://github.com/user-attachments/assets/b686d290-348c-466d-b5fd-65d5320268a7" />
+
 
 Landscape
-<img width="2736" height="1260" alt="image" src="https://github.com/user-attachments/assets/850df135-541a-47b3-b22e-050ec3d5d691" />
+<img width="2736" height="1260" alt="image" src="https://github.com/user-attachments/assets/46cc1811-3de7-4b75-8113-53de3246d628" />
+
 
 Accessibility size largest
 <img width="2736" height="1260" alt="image" src="https://github.com/user-attachments/assets/e53b13da-8db7-432f-93ff-c02bd7dd2bb0" />
