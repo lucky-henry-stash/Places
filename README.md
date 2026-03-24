@@ -9,7 +9,8 @@ Minimum iOS version is iOS18.
 
 ## Demo
 
-https://github.com/user-attachments/assets/68312d05-caff-4e2c-a7b6-fdfa4d9c6795
+https://github.com/user-attachments/assets/efd5f741-553e-43ba-a99e-758975798a0a
+
 
 ## Screenshots
 Portrait
