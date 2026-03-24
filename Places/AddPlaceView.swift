@@ -5,6 +5,15 @@ struct AddPlaceView: View {
     
     var onAdd: (Place) -> Void
     
+    var validator = FormValidator()
+    
+    var longitudeErrorMessage: String? {
+        validator.validateCoordinate(long, coordinateType: .longitude)?.errorDescription
+    }
+    
+    var latitudeErrorMessage: String? {
+        validator.validateCoordinate(lat, coordinateType: .latitude)?.localizedDescription
+    }
     @State private var name: String = ""
     @State private var lat: String = ""
     @State private var long: String = ""
@@ -14,10 +23,22 @@ struct AddPlaceView: View {
             Form {
                 Section(header: Text("New Place")) {
                     TextField("Name", text: $name)
-                    TextField("Latitude", text: $lat)
-                        .keyboardType(.decimalPad)
-                    TextField("Longitude", text: $long)
-                        .keyboardType(.decimalPad)
+                    VStack(alignment: .leading){
+                        TextField("Latitude", text: $lat)
+                            .keyboardType(.decimalPad)
+                        if let latitudeErrorMessage {
+                            Text(latitudeErrorMessage)
+                        }
+                    }
+                    VStack(alignment: .leading){
+                        TextField("Longitude", text: $long)
+                            .keyboardType(.decimalPad)
+                        if let longitudeErrorMessage {
+                            Text(longitudeErrorMessage)
+                        }
+                    }
+
+                    
                 }
             }
             .navigationTitle("Add New Place")
@@ -31,10 +52,14 @@ struct AddPlaceView: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Add") {
                         addPlace()
-                    }
+                    }.disabled(!isValid())
                 }
             }
         }
+    }
+    
+    func isValid() -> Bool{
+        return latitudeErrorMessage?.isEmpty == true && longitudeErrorMessage?.isEmpty == true
     }
     
     func addPlace() {

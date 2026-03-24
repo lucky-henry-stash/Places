@@ -5,13 +5,13 @@
 //  Created by henry on 3/24/26.
 //
 import Foundation
-enum FormError: LocalizedError {
+enum FormError: Error, LocalizedError {
     case invalidLatitude
     case invalidLongitude
     case missingLatitude
     case missingLongitude
     
-    var errorDescription: String {
+    var errorDescription: String? {
         switch self {
         case .invalidLatitude:
             return "Latitude must be between -90 and 90"
@@ -29,17 +29,9 @@ class FormValidator {
         case latitude
         case longitude
     }
-    enum FormError: Error {
-        case invalidLongitude
-        case invalidLatitude
-        case missingLatitude
-        case missingLongitude
-    }
     
-    var errors: [FormError] = []
-    
-    func validateCoordinate(_ coordinate: String?, coordinateType: CoordinateType) -> FormError? {
-        guard let coordinate else {
+    func validateCoordinate(_ coordinate: String, coordinateType: CoordinateType) -> FormError? {
+        guard !coordinate.isEmpty else {
             switch coordinateType {
             case .latitude: return .missingLatitude
             case .longitude: return .missingLongitude
