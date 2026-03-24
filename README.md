@@ -10,8 +10,14 @@ Minimum iOS version is iOS18.
 You need to build and run the modified wikipedia app to test this properly. Please go to fork: 
 [https://github.com/lucky-henry-stash/wikipedia-ios](https://github.com/lucky-henry-stash/wikipedia-ios)
 
-You can follow the build instructions provided by original author. However, the TLDR is to run `script/setup` then build and run the app. 
+You can follow the build instructions provided by original author. However, the TLDR is to 
+- run `script/setup`
+- then open the xcodeproject in xcode and run
+
 I did the steps from XCode 26.3, but older versions should also be compatible. 
+
+For evaluation, you can view the code diff here:
+https://github.com/wikimedia/wikipedia-ios/compare/main...lucky-henry-stash:wikipedia-ios:main
 
 ## Demo
 
