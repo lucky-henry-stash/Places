@@ -25,38 +25,33 @@ enum FormError: LocalizedError {
     }
 }
 class FormValidator {
+    enum CoordinateType {
+        case latitude
+        case longitude
+    }
     enum FormError: Error {
-        case invalidInput
+        case invalidLongitude
+        case invalidLatitude
         case missingLatitude
         case missingLongitude
     }
-        
-    func validate(longitude: String?, latitude: String?) throws -> Bool {
-        guard let longitude = longitude, !longitude.isEmpty else {
-            throw FormError.missingLongitude
+    
+    var errors: [FormError] = []
+    
+    func validateCoordinate(_ coordinate: String?, coordinateType: CoordinateType) -> FormError? {
+        guard let coordinate else {
+            switch coordinateType {
+            case .latitude: return .missingLatitude
+            case .longitude: return .missingLongitude
+            }
         }
         
-        guard let latitude = latitude, !latitude.isEmpty else {
-            throw FormError.missingLatitude
+        let max: Double = coordinateType == .latitude ? 90 : 180
+        guard let coordinateDouble = Double(coordinate),
+              abs(coordinateDouble) <= max else {
+            return coordinateType == .latitude ? .invalidLatitude : .invalidLongitude
         }
-        
-        guard let long = Double(longitude) else {
-            throw FormError.invalidInput
-        }
-        
-        guard let lat = Double(latitude) else {
-            throw FormError.invalidInput
-        }
-        
-        
-        if abs(long) > 180 {
-            throw FormError.invalidInput
-        }
-        
-        if abs(lat) > 90 {
-            throw FormError.invalidInput
-        }
-        return true
+        return nil
     }
 }
 
