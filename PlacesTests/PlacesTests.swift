@@ -39,14 +39,14 @@ final class PlacesTests: XCTestCase {
         let positivePlace = Place(name: nil, lat: 52.123, long: 4.231)
         let result = positivePlace.prettyString
 
-        XCTAssertEqual(result, "52.12300 N, 4.23100 E")
+        XCTAssertEqual(result, "52.12300° N, 4.23100° E")
     }
     
     func testPrettyStringSouthWest() {
         let place = Place(name: nil, lat: -33.8688, long: -151.2093)
         let result = place.prettyString
         
-        XCTAssertEqual(result, "33.86880 S, 151.20930 W")
+        XCTAssertEqual(result, "33.86880° S, 151.20930° W")
     }
     
     
@@ -54,14 +54,14 @@ final class PlacesTests: XCTestCase {
         let place = Place(name: nil, lat: 52, long: -4)
         let result = place.prettyString
         
-        XCTAssertEqual(result, "52.00000 N, 4.00000 W")
+        XCTAssertEqual(result, "52.00000° N, 4.00000° W")
     }
     
     func testPrettyStringSouthEast() {
         let place = Place(name: nil, lat: -52, long: 4)
         let result = place.prettyString
         
-        XCTAssertEqual(result, "52.00000 S, 4.00000 E")
+        XCTAssertEqual(result, "52.00000° S, 4.00000° E")
     }
     
     func testLongitude() {

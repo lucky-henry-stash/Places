@@ -30,8 +30,8 @@ struct Place: Decodable, Identifiable {
     var prettyString: String {
         let latDirection = lat >= 0 ? "N" : "S"
         let longDirection = long >= 0 ? "E" : "W"
-        let latString = String(format: "%.5f %@", abs(lat), latDirection)
-        let longString = String(format: "%.5f %@", abs(long), longDirection)
+        let latString = String(format: "%.5f° %@", abs(lat), latDirection)
+        let longString = String(format: "%.5f° %@", abs(long), longDirection)
         return "\(latString), \(longString)"
     }
 }
