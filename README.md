@@ -1,15 +1,31 @@
 # Places
 This app is a test to demonstrate opening a latitude and longitude in wikipedia app.
 
-To run the app, you can open Places with xed Places 
 
-To run wikipedia, please follow the instructions in their repo:
-https://github.com/wikimedia/wikipedia-ios?tab=readme-ov-file#building-and-running
+### Building and running
 
-But the TLDR is:
-./wikipedia/scripts/setup
-Then open in XCode and run. 
+I build the app using XCode 26.3.0, but it should build with any XCode after 26.0. 
+Minimum iOS version is iOS18.
 
-To run places, open the XCode project and run the app.
+## Demo
 
-To test properly, 'Wikipedia' and 'Places' must be in the same iOS simulator or device. 
+https://github.com/user-attachments/assets/68312d05-caff-4e2c-a7b6-fdfa4d9c6795
+
+## Screenshots
+Portrait
+<img width="1260" height="2736" alt="image" src="https://github.com/user-attachments/assets/9fa6742a-4b73-4b12-b65a-386d160edd7e" />
+
+Landscape
+<img width="2736" height="1260" alt="image" src="https://github.com/user-attachments/assets/850df135-541a-47b3-b22e-050ec3d5d691" />
+
+Accessibility size largest
+<img width="2736" height="1260" alt="image" src="https://github.com/user-attachments/assets/e53b13da-8db7-432f-93ff-c02bd7dd2bb0" />
+
+Accessibility labels
+<img width="1380" height="665" alt="image" src="https://github.com/user-attachments/assets/027819a8-06a9-4a43-b259-e2e2a18c4a50" />
+
+<img width="1380" height="665" alt="image" src="https://github.com/user-attachments/assets/3fd1810b-1ddd-4c92-870c-6f209a72c835" />
+
+
+
+
