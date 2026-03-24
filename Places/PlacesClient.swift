@@ -11,6 +11,8 @@ struct Locations: Decodable {
 }
 struct Place: Decodable {
     let name: String?
+    let lat: Double
+    let long: Double
 }
 
 class PlacesClient {
