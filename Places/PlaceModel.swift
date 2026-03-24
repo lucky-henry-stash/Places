@@ -14,7 +14,7 @@ struct Place: Decodable, Identifiable {
     let lat: Double
     let long: Double
     
-    lazy var url: URL? = {
+    var url: URL? {
         guard var components = URLComponents(string: "wikipedia://places") else { return nil }
         components.queryItems = [
             URLQueryItem(name: "longitude", value: long.description),
@@ -22,5 +22,5 @@ struct Place: Decodable, Identifiable {
             URLQueryItem(name: "name", value: name ?? "Untitled")
         ]
         return components.url
-    }()
+    }
 }
