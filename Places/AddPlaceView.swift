@@ -12,7 +12,7 @@ struct AddPlaceView: View {
     }
     
     var latitudeErrorMessage: String? {
-        validator.validateCoordinate(lat, coordinateType: .latitude)?.localizedDescription
+        validator.validateCoordinate(lat, coordinateType: .latitude)?.errorDescription
     }
     @State private var name: String = ""
     @State private var lat: String = ""
